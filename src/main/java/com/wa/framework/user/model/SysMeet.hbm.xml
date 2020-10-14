@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.wa.framework.user.model">
+    <class name="SysMeet" table="SYS_MEET2">
+        <meta attribute="sync-DAO">false</meta>
+        <id name="meetId" type="string" column="MEET_ID">
+            <generator class="uuid" />
+        </id>
+
+        <property
+                name="createUser"
+                column="CREATE_USER"
+                type="string"
+                not-null="true"
+                length="100"
+        />
+        <property
+                name="meetRoom"
+                column="MEET_ROOM"
+                type="string"
+                not-null="true"
+                length="100"
+        />
+        <property
+                name="meetHost"
+                column="MEET_HOST"
+                type="string"
+                not-null="true"
+                length="100"
+        />
+        <property
+                name="meetTheme"
+                column="MEET_THEME"
+                type="string"
+                not-null="true"
+                length="500"
+        />
+        <property
+                name="startTime"
+                column="START_TIME"
+                type="java.util.Date"
+                not-null="true"
+                length="7"
+        />
+        <property
+                name="endTime"
+                column="END_TIME"
+                type="java.util.Date"
+                not-null="true"
+                length="7"
+        />
+        <property
+                name="email"
+                column="EMAIL"
+                type="string"
+                not-null="true"
+                length="100"
+        />
+        <property
+                name="meetVisitor"
+                column="MEET_VISITOR"
+                type="string"
+                not-null="true"
+                length="255"
+        />
+    </class>
+</hibernate-mapping>
